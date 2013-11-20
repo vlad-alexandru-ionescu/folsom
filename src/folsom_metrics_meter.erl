@@ -140,7 +140,7 @@ get_value(Name) ->
 calc_mean_rate(_, 0) ->
     0.0;
 calc_mean_rate(Start, Count) ->
-    Elapsed = folsom_utils:now_epoch_micro() - Start,
+    Elapsed = (folsom_utils:now_epoch_micro() - Start) / 1000000.0,
     Count / Elapsed.
 
 calc_acceleration(Rate1, Rate2, Interval) ->
