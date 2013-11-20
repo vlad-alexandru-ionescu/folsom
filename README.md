@@ -4,6 +4,8 @@
 
   - Meter and Meter reader's mean value is measured in events/second rather than events/microsecond.
 
+  - Meter reader includes value in returned stats.
+
 
 ### folsom
 

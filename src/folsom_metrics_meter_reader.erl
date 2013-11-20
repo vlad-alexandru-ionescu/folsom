@@ -102,9 +102,11 @@ mark(Name, Value) ->
 get_values(Name) ->
     #meter_reader{one = OneMin,
                   five = FiveMin,
-                  fifteen = FifteenMin} = Meter = get_value(Name),
+                  fifteen = FifteenMin,
+                  last_count = Value} = Meter = get_value(Name),
 
     L = [
+         {value, Value},
          {one, get_rate(OneMin)},
          {five, get_rate(FiveMin)},
          {fifteen, get_rate(FifteenMin)},
