@@ -36,8 +36,7 @@ new(Name) ->
     ets:insert(?GAUGE_TABLE, Gauge).
 
 update(Name, Value) ->
-    Gauge = {Name, Value},
-    ets:insert(?GAUGE_TABLE, Gauge).
+    true = ets:update_element(?GAUGE_TABLE, Name, {2, Value}).
 
 clear(Name) ->
     new(Name).

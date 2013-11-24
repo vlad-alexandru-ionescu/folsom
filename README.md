@@ -6,6 +6,8 @@
 
   - Meter reader includes value in returned stats.
 
+  - Gauge metric type raises an error if updated via notify_existing_metric when metric does not exist.
+
 
 ### folsom
 
